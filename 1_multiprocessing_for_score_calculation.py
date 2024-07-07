@@ -13,7 +13,7 @@ def mp_worker(func, arg_list):
 def main_multiprocessing(func, arg_list):
     s = time()
     cpu = mp.cpu_count()
-    chunk_size = ceil(len(arg_list) / 12)
+    chunk_size = ceil(len(arg_list) / cpu)
 
     processes = []
 
